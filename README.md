@@ -5,12 +5,18 @@ Watch and sync local files to remote server.
 
 Usage
 -----------------
-``anySync --init``
-``anySync --name myConfig Name``
+``npm install -g anysync``
+``anysync --init``
+``anysync --name myConfig Name``
+
+Sample of config.json
+-----------------
+* please refer to [https://github.com/ottomao/anysync/blob/master/config.json_sample](https://github.com/ottomao/anysync/blob/master/config.json_sample)
+* config.json is stored at *~/.anysync/config.json*
 
 Note
 -----------------
-* ssh login
+* [TODO] ssh login 
 
 
 Contact
