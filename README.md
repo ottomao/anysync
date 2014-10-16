@@ -7,16 +7,17 @@ Usage
 -----------------
 ``npm install -g anysync``
 ``anysync --init``
-``anysync --name myConfig Name``
+``anysync --name myConfigName``
 
 Sample of config.json
 -----------------
-* please refer to [https://github.com/ottomao/anysync/blob/master/config.json_sample](https://github.com/ottomao/anysync/blob/master/config.json_sample)
+* you may find a sample config here : [https://github.com/ottomao/anysync/blob/master/config.json_sample](https://github.com/ottomao/anysync/blob/master/config.json_sample)
 * config.json is stored at *~/.anysync/config.json*
 
 Note
 -----------------
-* [TODO] ssh login 
+* [TODO] how to use ssh login 
+* [TODO] rsync is required
 
 
 Contact
