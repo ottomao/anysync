@@ -12,16 +12,10 @@ program
 	.option('-i, --init',        'init config file');
 
 program.on('--help', function(){
-	console.log('for more : https://github.com/ottomao/anysync ');
+	console.log('for more : https://github.com/ottomao/anysync');
 });
 
 program.parse(process.argv);
-
-
-
-if(!program.name){
-	program.help()
-}
 
 
 //config file
@@ -36,13 +30,16 @@ if(program.init){
 	}
 
 	if(!fs.existsSync(configFile)){
-		fs.writeFileSync(configFile,"[]");
+		fs.writeFileSync(configFile,'{\n"configList":[]\n}');
 	}
 
 	console.log("config file created!");
 	console.log("path: " + configFile);
 
-}else{
+	process.exit(0);
+
+
+}else if(program.name){
 
 	//check config file
 	if(!fs.existsSync(configFile)){
@@ -54,10 +51,11 @@ if(program.init){
 
 		//init service
 		var targetName = program.name,
-			success    = false;
+			success    = false,
+			configList = config.configList;
 
-		for(var key in config){
-			var item = config[key];
+		for(var key in configList){
+			var item = configList[key];
 			if(item.name == targetName){
 				init(item.localDir, item.remoteDir, item.server);
 				success = true;
@@ -67,11 +65,15 @@ if(program.init){
 
 		if(!success){
 			console.log( color.red("no config mathed") );
-			console.log('for more : https://github.com/ottomao/anysync ');
+			console.log('for more : https://github.com/ottomao/anysync');
 			process.exit(0);
 		}
 	}
 
+
+}else{
+	program.help();
+	process.exit(0);
 
 }
 
