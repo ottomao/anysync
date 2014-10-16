@@ -1,0 +1,18 @@
+{
+  "name": "anySync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "anysync": "bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Otto Mao <ottomao@gmail.com> (http://ottomao.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "colorful": "~2.1.0",
+    "commander": "~2.3.0"
+  }
+}

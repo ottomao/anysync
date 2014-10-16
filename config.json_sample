@@ -1,0 +1,14 @@
+[
+	{
+		"name"      :"serverA",
+		"server"    :"admin@test.com",
+		"remoteDir" :"/home/admin/templates",
+		"localDir"  :"/Users/Otto/workspace/templates"
+	},
+	{
+		"name"      :"serverB",
+		"server"    :"root@test.com",
+		"remoteDir" :"/home/admin/htdocs",
+		"localDir"  :"/ServerDir/htdocs"
+	}
+]
