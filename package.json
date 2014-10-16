@@ -1,7 +1,7 @@
 {
   "name": "anysync",
   "version": "0.0.2",
-  "description": "",
+  "description": "Watch and sync local files to remote server",
   "main": "index.js",
   "bin": {
     "anysync": "bin.js"
